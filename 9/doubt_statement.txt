@@ -8,9 +8,38 @@ using namespace std;
 int main() {
 	//code
 	
-	int t;
+	int t;	// number of values to check
 	cin>>t;
+
+	int arr[t]; // array to store the values
 	
+	for(int i = 0; i<t; i++)	// input integer into array so all inputs are together as in sample
+	{
+	    cin>>arr[i];    
+	}
+	
+	for(int i = 0, a =0; i<t; i++)  // calculate and display O/P as shown in sample
+  	  {
+        	while(arr[i]>0)
+        	{
+            		a=a+(arr[i]%10);
+            		arr[i]=arr[i]/10;
+      		}
+
+        	int sum=a;int rev=0;
+
+	  	while(a>0)
+	    	{
+	        	rev=rev*10+a%10;
+	        	a=a/10;
+	    	}
+	   	if(sum==rev)	// will check original sum against the reverse of the sum
+            		cout<<"YES\n";
+       	   	else
+            		cout<<"NO\n";
+ 	   }
+
+/* Removed code:
 	while(t>0)
 	{
 	    int n;
@@ -30,10 +59,11 @@ int main() {
 	        rev=rev*10+a%10;
 	        a=a/10;
 	    }
-	   if(sum==a)
+	   if(sum==a)	
 	    cout<<"YES";
 	    else
 	    cout<<"NO";
 	}
+*/
 	return 0;
 }
