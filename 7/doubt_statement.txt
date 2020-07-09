@@ -20,7 +20,7 @@ So the below code throws error.
    default : printf ("Default");
     }
 
-One possible solution keeping switch-case shown below:
+One possible solution keeping switch-case to check only the first character of the string is shown below:
 */
 
 switch(i[0])
