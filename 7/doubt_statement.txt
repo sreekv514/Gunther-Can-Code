@@ -4,10 +4,13 @@
 using namespace std;
 int main()
 {
-    char i[] ="EVEN";
+    char i[] ="EVEN"; 
+// Here, char i[] is a string with value {'E','V','E','N'}.
 
-/*Problem 1: swith-case can only handle integer or single characters, not string. So the below code throws error.
+/*
+Problem 1: swith-case can only handle integer or single characters, not string. 
 Problem 2: printf("format specifier", "string"); format is not followed.
+So the below code throws error.
 
     switch(i){
         case "EVEN" : printf ("Even");
@@ -16,13 +19,15 @@ Problem 2: printf("format specifier", "string"); format is not followed.
       break;
    default : printf ("Default");
     }
+
+One possible solution keeping switch-case shown below:
 */
 
 switch(i[0])
 	{
 	case 'E': printf("%s", "Even"); break;
 	case 'O': printf("%s", "Odd"); break;
-	default: printf("%s", "Default");
+	default:  printf("%s", "Default");
 	}   
    
    return 0;
