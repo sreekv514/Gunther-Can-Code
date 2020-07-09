@@ -1,1 +1,23 @@
 Hello Please help Gunther understand how code is working and why the answer will be this . Explain the working of code in detail. Doubt image is attatched which you have to explain.
+
+Explanation in the code below. The available options for the answer in the app are wrong.
+
+Code:
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a=5, b=6, c, d;
+/*4 variables declared, a&b are also initialized */
+
+	c = a, b;
+/* This is a simple assignment and b is ignored, so c = a = 5 */
+
+	d = (a, b);
+/* (a, b) will give d = b since in parentheses, comma acts as a binary operator. a is evaluated and discarded, then b is evaluated and its value is returned.  */
+
+	cout<<c<<' '<<d;
+/*O/P: 5 6 */
+
+	return 0;
+}
