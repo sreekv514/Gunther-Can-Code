@@ -5,6 +5,10 @@ using namespace std;
 int main()
 {
     char i[] ="EVEN";
+
+/*Problem 1: swith-case can only handle integer or single characters, not string. So the below code throws error.
+Problem 2: printf("format specifier", "string"); format is not followed.
+
     switch(i){
         case "EVEN" : printf ("Even");
       break;
@@ -12,7 +16,14 @@ int main()
       break;
    default : printf ("Default");
     }
-   
+*/
+
+switch(i[0])
+	{
+	case 'E': printf("%s", "Even"); break;
+	case 'O': printf("%s", "Odd"); break;
+	default: printf("%s", "Default");
+	}   
    
    return 0;
 }
